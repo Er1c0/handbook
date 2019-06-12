@@ -28,9 +28,19 @@ pango 1.40.4 -> 1.42.4_1
 ==> Installing dependencies for pango: freetype, fontconfig, pcre, gdbm, openssl, readline, sqlite, xz, python, glib, pixman, cairo, fribidi, graphite2, icu4c and harfbuzz
 ==> Installing pango dependency: freetype
 ```
-
+还报错
 ```
 Error: dlopen(/Users/lcz/git/jfjun_v5/jfjun-mg-base/node_modules/node --version/canvas/build/Release/canvas.node, 1): Library not loaded: @loader_path/libintl.8.dylib
   Referenced from: /Users/lcz/git/jfjun_v5/jfjun-mg-base/node_modules/canvas-prebuilt/canvas/build/Release/canvas.node
   Reason: image not found
+```
+
+
+**上述问题最终通过把node切换到最新版本，然后重新安装"canvas-prebuilt"后接解决**
+[How to resolve the canvas-prebuilt Node.js version incompatibility issue?](https://stackoverflow.com/questions/47301017/how-to-resolve-the-canvas-prebuilt-node-js-version-incompatibility-issue)
+
+```
+nvm use v8.14.0
+node uninstall canvas-prebuilt
+npm install canvas-prebuilt
 ```
