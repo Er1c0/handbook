@@ -44,3 +44,41 @@ nvm use v8.14.0
 node uninstall canvas-prebuilt
 npm install canvas-prebuilt
 ```
+
+## ubuntu上的处理方法
+现象如下：
+```
+module.js:682
+  return process.dlopen(module, path._makeLong(filename));
+                 ^
+
+Error: libpangocairo-1.0.so.0: cannot open shared object file: No such file or directory
+    at Object.Module._extensions..node (module.js:682:18)
+    at Module.load (module.js:566:32)
+```
+
+参考[How To Install "libpangocairo-1.0-0" Package on Ubuntu](http://zoomadmin.com/HowToInstall/UbuntuPackage/libpangocairo-1.0-0)
+```
+sudo apt-get install -y libpangocairo-1.0-0
+```
+
+```
+  return process.dlopen(module, path._makeLong(filename));
+                 ^
+
+Error: libgif.so.4: cannot open shared object file: No such file or directory
+    at Object.Module._extensions..node (module.js:682:18)
+```
+参考[How to install libgif-dev on Ubuntu 14.04 (Trusty Tahr)](https://www.howtoinstall.co/en/ubuntu/trusty/libgif-dev)
+```
+sudo apt-get install libgif-dev
+```
+
+```
+Error: The module '/home/gitlab-runner/jfjun-mg-base/node_modules/node-echarts/node_modules/canvas-prebuilt/canvas/build/Release/canvas.node'
+was compiled against a different Node.js version using
+NODE_MODULE_VERSION 57. This version of Node.js requires
+NODE_MODULE_VERSION 59. Please try re-compiling or re-installing
+the module (for instance, using `npm rebuild` or `npm install`).
+    at Object.Module._extensions..node (internal/modules/cjs/loader.js:683:18)
+```
