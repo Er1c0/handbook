@@ -9,3 +9,13 @@
 - `npm set registry <url>` 设置仓储url,另外也可以通过`nrm use taobao`命令修改
     + 用`npm set `修改的参数，可以通过`npm config ls`检查是否生效
 - `npm adduser --registry <url>` 
+
+
+## npm私有仓储
+[verdaccio](https://www.npmjs.com/package/verdaccio)
+
+- **E2E testing**:Verdaccio has proved to be a lightweight registry that can be booted in a couple of seconds, fast enough for any CI.
+- **Link multiple registries** 多个仓储
+- **Override public packages** 覆盖公共报
+- **Cache npmjs.org registry** 当公共仓储不可用时，做缓存
+- **Use private packages** 使用私有包
