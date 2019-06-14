@@ -14,8 +14,16 @@
 ## npm私有仓储
 [verdaccio](https://www.npmjs.com/package/verdaccio)
 
+使用说明
+```
+npm install --global verdaccio #安装
+verdaccio  # 启动服务
+npm set registry http://localhost:4873/ # 设置配置
+```
+
 - **E2E testing**:Verdaccio has proved to be a lightweight registry that can be booted in a couple of seconds, fast enough for any CI.
 - **Link multiple registries** 多个仓储
 - **Override public packages** 覆盖公共报
 - **Cache npmjs.org registry** 当公共仓储不可用时，做缓存
 - **Use private packages** 使用私有包
+
