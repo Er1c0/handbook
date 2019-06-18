@@ -9,7 +9,7 @@
 - `npm set registry <url>` 设置仓储url,另外也可以通过`nrm use taobao`命令修改
     + 用`npm set `修改的参数，可以通过`npm config ls`检查是否生效
 - `npm adduser --registry <url>` 
-
+- `npm publish` 版本发布，默认是发布整个工程，也可以通过package.json中 files参数控制发布哪些文件？如`files:["src"]`
 
 ## npm私有仓储:verdaccio
 [verdaccio](https://www.npmjs.com/package/verdaccio)
