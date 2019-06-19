@@ -53,3 +53,31 @@ GLOBAL OPTIONS:
    --help, -h                   show help
    --version, -v                print the version
 ```
+
+## git-runner配置
+通过`git-runner list`命令可以看到` ConfigFile=/etc/gitlab-runner/config.toml`
+样例文件内容为:
+```
+concurrent = 1
+check_interval = 0
+
+[session_server]
+  session_timeout = 1800
+
+[[runners]]
+  name = "mg_ci_111"
+  url = "http://gitlab.lingxi.co/"
+  token = "Co1UmjA6zWzBmcLss4t3"
+  executor = "shell"
+  [runners.custom_build_dir]
+  [runners.cache]
+    [runners.cache.s3]
+    [runners.cache.gcs]
+```
+
+参数说明:
+- concurrent 并发数
+- log_level 日志级别，比命令行的参数级别低:--debug, -l or --log-level
+- log_format 日志格式如：runner、text、json等，命令参数为 --log-format
+- check_interval 新任务的检查周期，默认为3秒
+- 

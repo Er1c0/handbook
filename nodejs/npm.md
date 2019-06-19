@@ -6,10 +6,13 @@
 - `npm config delete <key>` 是删除某个key
     + `config prefix` 参考：https://docs.npmjs.com/misc/config
         * The location to install global items. If set on the command line, then it forces non-global commands to run in the specified folder. 是一个位置
+    + `npm config set user 0`
+    + `npm config set unsafe-perm true`
 - `npm set registry <url>` 设置仓储url,另外也可以通过`nrm use taobao`命令修改
     + 用`npm set `修改的参数，可以通过`npm config ls`检查是否生效
 - `npm adduser --registry <url>` 
 - `npm publish` 版本发布，默认是发布整个工程，也可以通过package.json中 files参数控制发布哪些文件？如`files:["src"]`
+
 
 ## npm私有仓储:verdaccio
 [verdaccio](https://www.npmjs.com/package/verdaccio)
@@ -132,3 +135,25 @@ server {
 }
 ```
 
+## 问题:NODE_MODULE_VERSION
+错误样例:
+```
+Error: The module '/root/jfjun-mg-test-chris/node_modules/node-echarts/node_modules/canvas-prebuilt/canvas/build/Release/canvas.node'
+was compiled against a different Node.js version using
+NODE_MODULE_VERSION 57. This version of Node.js requires
+NODE_MODULE_VERSION 59. Please try re-compiling or re-installing
+the module (for instance, using `npm rebuild` or `npm install`).
+```
+关于NODE_MODULE_VERSION的定义，参考[官网-以往的版本](https://nodejs.org/zh-cn/download/releases/)
+
+NODE_MODULE_VERSION 指的是 Node.js 的 ABI (application binary interface) 版本号，用来确定编译 Node.js 的 C++ 库版本，以确定是否可以直接加载而不需重新编译。在早期版本中其作为一位十六进制值来储存，而现在表示为一个整数。
+
+比如:
+
+- node v6.x=>48
+- node v7.x=>51
+- node v8.x=>57
+- node v9.x=>59
+- node v10.x=>64
+- node v11.x=>67
+- node v12.x=>72

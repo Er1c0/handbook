@@ -8,9 +8,9 @@ OXML是由微软公司为Office 2007产品开发的技术规范，现已成为�
 # WordprocessingML
 http://officeopenxml.com/WPcontentOverview.php
 
-- w:p 段
+- w:p 段，包含多个w:r
 - w:pPr 段格式
-- w:r 文本，子元素为：br、cr、drawing、noBreakHyphen
+- w:r Runs are non-block content; they define regions of text that do not necessarily begin on a new line，子元素为：br、cr、drawing、noBreakHyphen
 - w:drawing 图片对象
 
 ## w:r text 
