@@ -35,3 +35,14 @@ npm ERR!     /root/.npm/_logs/2019-06-19T14_34_59_468Z-debug.log
 ```
 
 参考：https://github.com/jansmolders86/mediacenterjs/issues/191
+
+
+## 问题：Using request for node-pre-gyp https download
+并非卡死，而是确实在下载，只是时间比较长：
+
+```
+> canvas@2.5.0 install /root/jfjun-mg-test-chris/node_modules/canvas
+> node-pre-gyp install --fallback-to-build
+
+node-pre-gyp WARN Using request for node-pre-gyp https download
+```
