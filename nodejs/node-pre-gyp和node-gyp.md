@@ -12,10 +12,10 @@ npm install v8-profiler --profiler_binary_host_mirror=https://npm.taobao.org/mir
 
 
 https://npm.taobao.org/mirrors/canvas-prebuilt
-
-```
+     
+```  
  npm install phantomjs --phantomjs_cdnurl=http://npm.taobao.org/mirrors/phantomjs
-  npm install chromedriver --chromedriver_cdnurl=http://npm.taobao.org/mirrors/chromedriver
+  npm install chromedriver --chromedriver_cdnu在vrl=http://npm.taobao.org/mirrors/chromedriver
   npm install operadriver --operadriver_cdnurl=http://npm.taobao.org/mirrors/operadriver
 ```
 
