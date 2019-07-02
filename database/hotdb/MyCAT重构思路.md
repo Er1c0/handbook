@@ -1,0 +1,27 @@
+
+- 1、配置方面：内存配置模型和加载方式隔离：可以支持数据库表加载、XML加载、ZK加载
+- 2、连接池池：链接建立成功和失败的几个接口，要和ResponseHandler执行SQL操作的接口分开。
+    + 另外链接建立和心跳这部分的代码跟稳定性关系非常大，要重点优化下
+- 3、Session作为前后端的隔离，接口抽象出来，几个实现类：
+    - AutoCommitSession —对于自动提交模式，需要后端的autocommit=true
+    - AutoCommitTransactionSession -对于前端自动提交，后端对应多点的增删改（不包含查）操作时，需要后端的autocommit=false，由会话来控制多点操作后的提交行为
+    - TransactionSession-对于事务模式比如前端的autocommit=false、start transaction、begin等，需要后端的autocommit=false
+    - XATransactionSession-后端通过XA实现TransactionSession的功能。
+- 4、ResponseHandler可以改名为SQLExecutor，负责执行SQL；与Session的区别是Session负责管理、协调、上下文。SQLExecutor针对的一个前端查询的具体执行，不管上下文，不管是不是事务。
+    - avg、orderby、groupby、排序等可以由不同的SQLExecutor实现
+    - SQLExecutor可以提供其他人进行扩展
+    - SQLExecutor采用注册方式，当前端过来一个请求，当路由解析后，根据SQLExecutor的注册条件，选择一个的SQLExecutor。`没想好如何反向注册`
+- 5、可用性方面
+    - 尽量减少配置
+        - 比如表的主键，启动时获得表的DDL，自动解析出主键，而不去用户再额外配置下
+    - 尽量减少注解
+        - 比如全局序列号，启动时获得表的DDL或者截获DDL，判断字段是否为主键。不需要通过注解使用这个功能
+        - 跨库JOIN改为自动判断（`要用到SQLExecutor的注册条件`），而不需要通过注解
+- 6、同步改异步
+    - 如父子表，子表通过父表获计算分片，目前是同步方式(若保留有意义的话，需要改为异步)但改异步难度较大。
+    - 当集群部署时，全局序列号如果要支持，需要有个全局序列号协调程序
+- 7、代码可读性作为开源项目，代码可读性好，代码质量高，别人才敢用
+    - 现在的包结构比较乱，整理包的关系
+    - 没用的代码尽量删掉。
+    - 非核心功能，非主要功能，移到其它项目
+- 8、待补充。。。。
