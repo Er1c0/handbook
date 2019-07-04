@@ -1,4 +1,11 @@
-# mongoose_inherit_to_diff_collection
+# 几个Mongodb库比较
+
+mongorito 基本处于停滞状态
+mongoose 仍然活跃
+
+
+# mongoose
+## mongoose_inherit_to_diff_collection
 [The model.discriminator() function](http://mongoosejs.com/docs/discriminators.html)
 Discriminators are a schema inheritance mechanism. They enable you to have multiple models with overlapping schemas on top of the same underlying MongoDB collection.
 鉴别器是一种schema继承模式，它们使您能够在同一底层MongoDB集合之上具有重叠模式的多个模型。

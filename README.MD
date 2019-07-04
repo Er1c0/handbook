@@ -1,4 +1,4 @@
-# summary 
+# SUMMARY
 - [榜样的力量](./榜样的力量.MD)
 - bpm
   - [bpm](bpm/bpm.md)
@@ -6,6 +6,20 @@
   - [通过氚云配置订单系统](buz/通过氚云配置订单系统.md)
 - ci
   - [gitlab-ci](ci/gitlab-ci.md)
+- database
+  - [PostgreSQL](database/PostgreSQL.md)
+  - [Timeseries statistics util](database/Timeseries statistics util.md)
+  - hotdb
+    - [Buffer机制](database/hotdb/Buffer机制.md)
+    - [MyCAT&HotDB线程模型](database/hotdb/MyCAT&HotDB线程模型.md)
+    - [MyCAT&HotDB网络框架](database/hotdb/MyCAT&HotDB网络框架.md)
+    - [MyCAT重构思路](database/hotdb/MyCAT重构思路.md)
+    - [分布式事务和会话管理](database/hotdb/分布式事务和会话管理.md)
+    - [分布式数据库理论](database/hotdb/分布式数据库理论.md)
+  - [mongodb](database/mongodb.md)
+  - [mongodb官方文档学习笔记](database/mongodb官方文档学习笔记.md)
+  - [mongodb系统优化](database/mongodb系统优化.md)
+  - [mongoose_inherit_to_diff_collection](database/mongoose_inherit_to_diff_collection.md)
 - device
   - [索尼电子书DPT-RP1](device/索尼电子书DPT-RP1.md)
 - format
@@ -32,8 +46,11 @@
   - [docx文件解析](office/docx文件解析.md)
   - [ooxml](office/ooxml.md)
 - pandas
+- python
+  - [argparse用法](python/argparse用法.md)
 - web
   - [公众号+小程序将成标配打法](web/公众号+小程序将成标配打法.md)
+  - [动态表单的设计](web/动态表单的设计.md)
   - [小程序原理](web/小程序原理.md)
   - [小程序排名和趋势](web/小程序排名和趋势.md)
   - [氚云学习](web/氚云学习.md)
@@ -42,3 +59,4 @@
   - [processOn](读书笔记/processOn.md)
   - [从软件搬砖师到软件架构师，程序员的架构师之路-许式伟](读书笔记/从软件搬砖师到软件架构师，程序员的架构师之路-许式伟.md)
   - [国际SaaS巨头前进，国内对标者几何？](读书笔记/国际SaaS巨头前进，国内对标者几何？.md)
+  - [黑客与画家](读书笔记/黑客与画家.md)
