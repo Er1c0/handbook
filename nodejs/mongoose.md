@@ -5,6 +5,22 @@ mongoose 仍然活跃
 
 
 # mongoose
+
+
+## mongodb的运行器
+- mongodb-topology-manager
+  - 允许以编程方式启动MongoDB实例、Replicaset或Sharded群集
+- mongodb-memory-server
+  - 以编程方式启动真实的Mongodb Server，以便在开发期间进行测试和模拟。
+  - 默认情况下讲数据保存在内存中。
+  - 在启动时下载最新的Mongo二进制包，保存在cache目录。首次启动会占用些时间。
+
+## 构造数据
+- dookie
+  - 允许使用额外的语法糖(扩展json、变量、导入、继承等)在Json或yaml中编写mongodb测试装置
+- Seedgoose 
+  - 以递归方式变量你的模型，为您设置智能ID引用跟踪
+
 ## mongoose_inherit_to_diff_collection
 [The model.discriminator() function](http://mongoosejs.com/docs/discriminators.html)
 Discriminators are a schema inheritance mechanism. They enable you to have multiple models with overlapping schemas on top of the same underlying MongoDB collection.
