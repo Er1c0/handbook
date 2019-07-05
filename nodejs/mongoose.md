@@ -4,6 +4,24 @@ mongorito 基本处于停滞状态
 mongoose 仍然活跃
 
 
+# mongodb驱动测试代码
+```
+const MongoClient = require('mongodb').MongoClient;
+
+const url = 'mongodb://test:test@localhost/test';
+let client = await MongoClient.connect(url, { useNewUrlParser: true });
+const db = client.db();
+let collection = db.collection('formdatas1');
+if (!collection) {
+collection = await db.createCollection('formdatas1');
+}
+await collection.save({ a: 1 })
+// Find some documents
+let ret = await collection.find({}).toArray();
+console.log("list = ", ret);
+let one = await collection.findOne({});
+console.log("one=", one);
+```
 # mongoose
 
 
