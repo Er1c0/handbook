@@ -1,4 +1,34 @@
+- [Mongodb官方文档学习笔记](#Mongodb%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0)
+  - [MongoDB Limits and Thresholds mongodb的上限和下限](#MongoDB-Limits-and-Thresholds-mongodb%E7%9A%84%E4%B8%8A%E9%99%90%E5%92%8C%E4%B8%8B%E9%99%90)
+  - [4.1 Data Modeling Introduction](#41-Data-Modeling-Introduction)
+    - [4.1.1 Document Structure](#411-Document-Structure)
+    - [4.1.2 Atomicity of Write Operations](#412-Atomicity-of-Write-Operations)
+    - [4.1.3 Document Growth](#413-Document-Growth)
+    - [4.1.4 Data Use and Performance](#414-Data-Use-and-Performance)
+  - [4.2 Data Modeling Concepts](#42-Data-Modeling-Concepts)
+    - [4.2.1 Data Model Design](#421-Data-Model-Design)
+    - [4.2.2 Operational Factors and Data Models](#422-Operational-Factors-and-Data-Models)
+    - [4.2.3 GridFS](#423-GridFS)
+  - [4.3 Data Model Examples and Patterns](#43-Data-Model-Examples-and-Patterns)
+    - [4.3.1 Model Relationships Between Documents](#431-Model-Relationships-Between-Documents)
+    - [4.3.2 Model Tree Structures](#432-Model-Tree-Structures)
+    - [4.3.3 Model Specific Application Contexts](#433-Model-Specific-Application-Contexts)
+  - [4.4 Data Model Reference](#44-Data-Model-Reference)
+    - [4.4.2 Database References](#442-Database-References)
+  
 # Mongodb官方文档学习笔记
+## MongoDB Limits and Thresholds mongodb的上限和下限
+[MongoDB Limits and Thresholds](https://docs.mongodb.com/manual/reference/limits)
+
+- Indexes
+  - 每个collection的最大索引数 **64个**
+- 最多的collections数
+  - WiredTiger引擎没有限制
+  - 对于MMAPv1引擎，= f(the size of the namespace file，the number of indexes of collections in the database)
+    - 名称空间的数量限制为名称空间的文件大小/628
+    - 16M命名空间文件，可以支持约24,000的空间(16*1024*1024/628~~26715)
+    - 每个collection和索引都是namespace
+  
 
 ## 4.1 Data Modeling Introduction
 The key challenge in data modeling is balancing the needs of the application, the performance characteristics of the database engine, and the data retrieval patterns. When designing data models, always consider the application usage of the data (i.e. queries, updates, and processing of the data) as well as the inherent structure of the data itself.

@@ -1,8 +1,17 @@
 # 几个Mongodb库比较
 
-mongorito 基本处于停滞状态
-mongoose 仍然活跃
+- mongorito 基本处于停滞状态
+- [mongoose](https://github.com/Automattic/mongoose) 仍然非常活跃
+- [node-mongodb-native](https://github.com/mongodb/node-mongodb-native) 仍然非常活跃,其[说明文档](http://mongodb.github.io/node-mongodb-native/3.3/api/Collection.html)
 
+## mongoose和node-mongodb-native的关系
+在mongoose官网中，有这么一段:
+
+> Mongoose is built on top of the official MongoDB Node.js driver. Each mongoose model keeps a reference to a native MongoDB driver collection. The collection object can be accessed using YourModel.collection. However, using the collection object directly bypasses all mongoose features, including hooks, validation, etc. The one notable exception that YourModel.collection still buffers commands. As such, YourModel.collection.find() will not return a cursor.
+
+Mongoose建立在MongoDB官方Node.js驱动程序之上。每个mongoose模型都保留对原生MongoDB驱动程序集合的引用。 可以使用YourModel.collection访问集合对象。 但是，使用集合对象直接绕过所有的mongoose功能，包括钩子，验证等.一个值得注意的例外是**YourModel.collection仍然缓冲命令**。因此YourModel.collection.find（）不会返回游标。
+
+另外YourModel.db 返回的是原生的链接对象，对应功能可参见[node-mongodb-native/3.3/api/Db](http://mongodb.github.io/node-mongodb-native/3.3/api/Db.html)
 
 # mongodb驱动测试代码
 ```
