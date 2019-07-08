@@ -4,6 +4,21 @@
 - [mongoose](https://github.com/Automattic/mongoose) 仍然非常活跃
 - [node-mongodb-native](https://github.com/mongodb/node-mongodb-native) 仍然非常活跃,其[说明文档](http://mongodb.github.io/node-mongodb-native/3.3/api/Collection.html)
 
+## Difference between MongoDB and Mongoose：
+
+就nodejs而言，`mongodb`是与mongodb实例交互的原生驱动程序，而mongoose是mongodb的对象建模工具。
+Mongoose是构建在mongodb驱动程序之上，为程序员提供了一种对数据建模的工具。
+
+使用Mongoose，用户可以为特定集合中的文档定义模式，它为MongoDB中的数据创建和管理提供便利。缺点方面，学习mongoose可能需要些时间，并且处理那些相当复杂的模式方面有些限制。
+
+但是，如果你的集合模式不可预测，或者你想要在Node.js中有类似Mongo-shell的体验，那就继续使用MongoDB驱动吧。这是最简单的选择。缺点是你必须编写更大量的代码来验证数据，并且错误的风险更高。
+
+- https://stackoverflow.com/questions/28712248/difference-between-mongodb-and-mongoose 
+- https://medium.com/@bugwheels94/performance-difference-in-mongoose-vs-mongodb-60be831c69ad: 使用了benchmark进行测试
+- [Mongodb-native over mongoose?](https://dev.to/tojacob/mongodb-native-over-mongoose--3n9e):
+  - [Kevin Isom](https://github.com/Kevnz):我使用mongojs或者mongodb.如果你使用的是无模式的数据库，那为什么要引入模式呢？为了校验？实际上，在访问db/(model之前就应该检验了，或者在api入口，或者在离开浏览器之前。因此，校验应该再客户端和服务器之前共享，而不是在数据库级别)
+  - [Perry Donham](https://dev.to/perrydbucs):1.我在课程中推广Mongoose作为设计工具。抽象通常作为契约，使用Mongoose模式，我可以创建并强化与数据库接口的契约。这个模式也能帮我思考数据的结构及其关系。2.如果应用需要存储任意对象，我可能只使用没有mongoose抽象的MongoDB，但是依我的经营，这种要求非常罕见。
+
 ## mongoose和node-mongodb-native的关系
 在mongoose官网中，有这么一段:
 

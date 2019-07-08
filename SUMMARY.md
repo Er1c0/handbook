@@ -18,12 +18,13 @@
     - [分布式数据库理论](database/hotdb/分布式数据库理论.md)
   - [mongodb](database/mongodb.md)
   - [mongodb官方文档学习笔记](database/mongodb官方文档学习笔记.md)
+  - [mongodb稀疏索引](database/mongodb稀疏索引.md)
   - [mongodb系统优化](database/mongodb系统优化.md)
-  - [mongoose_inherit_to_diff_collection](database/mongoose_inherit_to_diff_collection.md)
 - device
   - [索尼电子书DPT-RP1](device/索尼电子书DPT-RP1.md)
 - format
   - [markdown](format/markdown.md)
+  - [po文件](format/po文件.md)
   - [toml](format/toml.md)
 - git
   - [git常用命令](git/git常用命令.md)
@@ -34,22 +35,31 @@
   - [letsencrypt免费https证书及CDN配置https](network/letsencrypt免费https证书及CDN配置https.md)
   - [ssh](network/ssh.md)
 - nodejs
+  - [benchmark](nodejs/benchmark.md)
   - [canvas](nodejs/canvas.md)
+  - [mongoose vs mongodb](nodejs/mongoose vs mongodb.md)
   - [node-echarts](nodejs/node-echarts.md)
   - [node-pre-gyp和node-gyp](nodejs/node-pre-gyp和node-gyp.md)
+  - [nodejs经验笔记](nodejs/nodejs经验笔记.md)
   - [nodered](nodejs/nodered.md)
   - [npm install类问题](nodejs/npm install类问题.md)
   - [npm](nodejs/npm.md)
   - [nrm](nodejs/nrm.md)
   - [nvm](nodejs/nvm.md)
+  - [typescript](nodejs/typescript.md)
+  - [三个点three dots使用说明](nodejs/三个点three dots使用说明.md)
 - office
   - [docx文件解析](office/docx文件解析.md)
   - [ooxml](office/ooxml.md)
 - pandas
 - python
   - [argparse用法](python/argparse用法.md)
+- tmux
+  - [tmux使用](tmux/tmux使用.md)
 - web
+  - [react vs vue](web/react vs vue.md)
   - [公众号+小程序将成标配打法](web/公众号+小程序将成标配打法.md)
+  - [动态表单](web/动态表单.md)
   - [动态表单的设计](web/动态表单的设计.md)
   - [小程序原理](web/小程序原理.md)
   - [小程序排名和趋势](web/小程序排名和趋势.md)

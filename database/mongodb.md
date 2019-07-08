@@ -47,6 +47,19 @@ security:
 sudo service mongod stop
 sudo service mongod start
 ```
+## 更重要，与ubuntu提供的工具包冲突？！！
+
+`mongodb-org`包是MongoDB公司官方维护和支持的，并且与最新的MongoDB发布版本保持更新。
+由Ubuntu提供的`mongodb`并不是MongoDB公司维护的，并且与`mongodb-org`冲突。检查Ubuntu的`mongodb`是否安装在系统上，运行`sudo apt list --installed | grep mongodb`,在正式安装前，您可以使用`sudo apt remove mongodb`和`sudo apt purge mongodb`来删除和清除mongodb包。
+
+- mongodb-org 一个元包，自动包含了下列四个组件包
+- mongodb-org-server 包含mongod、初始脚本和一个配置文件(/etc/mongod.conf)
+- mongodb-org-mongos 包含mongos
+- mongodb-org-shell 包含mongo
+- mongodb-org-tools 包含下列工具：`mongoimport bsondump, mongodump, mongoexport, mongofiles, mongorestore, mongostat, and mongotop`
+
+
+
 ## MongoDb数据文件迁移记录
 数据文件默认是系统盘，大小有限制，需要迁移到专门的数据盘
 1.打开/etc/mongod.conf查看dbPath的路径
