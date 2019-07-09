@@ -1,0 +1,134 @@
+==> /var/log/gitlab/postgresql/current <==
+2015-07-23_10:30:35.78816 received TERM from runit, sending INT instead to force quit connections
+2015-07-23_10:30:35.79203 LOG:  received fast shutdown request
+2015-07-23_10:30:35.79204 LOG:  aborting any active transactions
+2015-07-23_10:30:35.79204 FATAL:  terminating connection due to administrator command
+2015-07-23_10:30:35.79204 FATAL:  terminating connection due to administrator command
+2015-07-23_10:30:35.79204 FATAL:  terminating connection due to administrator command
+2015-07-23_10:30:35.79205 LOG:  autovacuum launcher shutting down
+2015-07-23_10:30:35.79236 LOG:  shutting down
+2015-07-23_10:30:35.79970 LOG:  database system is shut down
+2015-07-23_10:30:35.84456 LOG:  database system was shut down at 2015-07-23 10:30:35 GMT
+2015-07-23_10:30:35.85049 LOG:  database system is ready to accept connections
+2015-07-23_10:30:35.85062 LOG:  autovacuum launcher started
+
+==> /var/log/gitlab/redis/current <==
+2015-07-23_10:30:36.20842 [1535 | signal handler] (1437647436) Received SIGTERM scheduling shutdown...
+2015-07-23_10:30:36.21893 [1535] 23 Jul 10:30:36.217 # User requested shutdown...
+2015-07-23_10:30:36.21894 [1535] 23 Jul 10:30:36.217 * Saving the final RDB snapshot before exiting.
+2015-07-23_10:30:36.22450 [1535] 23 Jul 10:30:36.224 * DB saved on disk
+2015-07-23_10:30:36.22454 [1535] 23 Jul 10:30:36.224 * Removing the unix socket file.
+2015-07-23_10:30:36.22459 [1535] 23 Jul 10:30:36.224 # Redis is now ready to exit, bye bye...
+
+==> /var/log/gitlab/sidekiq/current <==
+2015-07-23_10:30:36.22989 2015-07-23T10:30:36.228Z 3324 TID-alufo ERROR: Error fetching message: No such file or directory - connect(2) for /var/opt/gitlab/redis/redis.socket
+2015-07-23_10:30:36.22991 2015-07-23T10:30:36.228Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/connection/ruby.rb:180:in `connect_nonblock'
+2015-07-23_10:30:36.22992 2015-07-23T10:30:36.228Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/connection/ruby.rb:180:in `connect'
+2015-07-23_10:30:36.22992 2015-07-23T10:30:36.228Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/connection/ruby.rb:209:in `connect'
+2015-07-23_10:30:36.22992 2015-07-23T10:30:36.228Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/client.rb:304:in `establish_connection'
+2015-07-23_10:30:36.22993 2015-07-23T10:30:36.228Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/client.rb:85:in `block in connect'
+2015-07-23_10:30:36.22993 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/client.rb:266:in `with_reconnect'
+2015-07-23_10:30:36.22993 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/client.rb:84:in `connect'
+2015-07-23_10:30:36.22993 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/client.rb:326:in `ensure_connected'
+2015-07-23_10:30:36.22994 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/client.rb:197:in `block in process'
+2015-07-23_10:30:36.22994 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/client.rb:279:in `logging'
+2015-07-23_10:30:36.22994 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/client.rb:196:in `process'
+2015-07-23_10:30:36.22994 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/client.rb:102:in `call'
+2015-07-23_10:30:36.22995 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/client.rb:185:in `block in call_with_timeout'
+2015-07-23_10:30:36.22995 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/client.rb:253:in `with_socket_timeout'
+2015-07-23_10:30:36.22995 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis/client.rb:184:in `call_with_timeout'
+2015-07-23_10:30:36.22995 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis.rb:1059:in `block in _bpop'
+2015-07-23_10:30:36.22996 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis.rb:37:in `block in synchronize'
+2015-07-23_10:30:36.22996 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+2015-07-23_10:30:36.22996 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis.rb:37:in `synchronize'
+2015-07-23_10:30:36.22996 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis.rb:1056:in `_bpop'
+2015-07-23_10:30:36.22997 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-3.1.0/lib/redis.rb:1101:in `brpop'
+2015-07-23_10:30:36.22997 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-namespace-1.5.1/lib/redis/namespace.rb:392:in `call_with_namespace'
+2015-07-23_10:30:36.22998 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/redis-namespace-1.5.1/lib/redis/namespace.rb:289:in `method_missing'
+2015-07-23_10:30:36.22998 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/sidekiq-3.3.0/lib/sidekiq/fetch.rb:102:in `block in retrieve_work'
+2015-07-23_10:30:36.22998 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/connection_pool-2.1.0/lib/connection_pool.rb:58:in `with'
+2015-07-23_10:30:36.22998 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/sidekiq-3.3.0/lib/sidekiq.rb:72:in `redis'
+2015-07-23_10:30:36.22998 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/sidekiq-3.3.0/lib/sidekiq/fetch.rb:102:in `retrieve_work'
+2015-07-23_10:30:36.22999 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/sidekiq-3.3.0/lib/sidekiq/fetch.rb:37:in `block in fetch'
+2015-07-23_10:30:36.22999 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/sidekiq-3.3.0/lib/sidekiq/util.rb:15:in `watchdog'
+2015-07-23_10:30:36.22999 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/sidekiq-3.3.0/lib/sidekiq/fetch.rb:33:in `fetch'
+2015-07-23_10:30:36.23000 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/sidekiq-3.3.0/lib/sidekiq/fetch.rb:44:in `block (2 levels) in fetch'
+2015-07-23_10:30:36.23000 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/celluloid-0.16.0/lib/celluloid/actor.rb:357:in `block in task'
+2015-07-23_10:30:36.23000 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/celluloid-0.16.0/lib/celluloid/tasks.rb:57:in `block in initialize'
+2015-07-23_10:30:36.23000 2015-07-23T10:30:36.229Z 3324 TID-alufo ERROR: /opt/gitlab/embedded/service/gem/ruby/2.1.0/gems/celluloid-0.16.0/lib/celluloid/tasks/task_fiber.rb:15:in `block in create'
+
+==> /var/log/gitlab/redis/current <==
+2015-07-23_10:30:36.24119                 _._                                                  
+2015-07-23_10:30:36.24120            _.-``__ ''-._                                             
+2015-07-23_10:30:36.24120       _.-``    `.  `_.  ''-._           Redis 2.8.20 (00000000/0) 64 bit
+2015-07-23_10:30:36.24120   .-`` .-```.  ```\/    _.,_ ''-._                                   
+2015-07-23_10:30:36.24120  (    '      ,       .-`  | `,    )     Running in stand alone mode
+2015-07-23_10:30:36.24121  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2015-07-23_10:30:36.24121  |    `-._   `._    /     _.-'    |     PID: 5386
+2015-07-23_10:30:36.24121   `-._    `-._  `-./  _.-'    _.-'                                   
+2015-07-23_10:30:36.24121  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2015-07-23_10:30:36.24121  |    `-._`-._        _.-'_.-'    |           http://redis.io        
+2015-07-23_10:30:36.24121   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2015-07-23_10:30:36.24122  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2015-07-23_10:30:36.24122  |    `-._`-._        _.-'_.-'    |                                  
+2015-07-23_10:30:36.24122   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2015-07-23_10:30:36.24122       `-._    `-.__.-'    _.-'                                       
+2015-07-23_10:30:36.24122           `-._        _.-'                                           
+2015-07-23_10:30:36.24124               `-.__.-'                                               
+2015-07-23_10:30:36.24124 
+2015-07-23_10:30:36.24132 [5386] 23 Jul 10:30:36.241 # Server started, Redis version 2.8.20
+2015-07-23_10:30:36.24137 [5386] 23 Jul 10:30:36.241 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2015-07-23_10:30:36.24144 [5386] 23 Jul 10:30:36.241 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+2015-07-23_10:30:36.24149 [5386] 23 Jul 10:30:36.241 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+2015-07-23_10:30:36.24278 [5386] 23 Jul 10:30:36.242 * DB loaded from disk: 0.001 seconds
+2015-07-23_10:30:36.24279 [5386] 23 Jul 10:30:36.242 * The server is now ready to accept connections at /var/opt/gitlab/redis/redis.socket
+
+==> /var/log/gitlab/sidekiq/current <==
+2015-07-23_10:30:36.63222 2015-07-23T10:30:36.632Z 3324 TID-5q2fc INFO: Shutting down
+2015-07-23_10:30:36.63391 2015-07-23T10:30:36.633Z 3324 TID-1wr3m0 INFO: Shutting down 25 quiet workers
+2015-07-23_10:30:36.63856 2015-07-23T10:30:36.637Z 3324 TID-tiask INFO: [Sidetiq] Sidetiq::Actor::Clock id: 49566320 shutting down ...
+2015-07-23_10:30:36.63857 2015-07-23T10:30:36.638Z 3324 TID-thbs0 INFO: [Sidetiq] Sidetiq::Actor::Handler id: 49519560 shutting down ...
+2015-07-23_10:30:36.63857 2015-07-23T10:30:36.638Z 3324 TID-thmys INFO: [Sidetiq] Sidetiq::Actor::Handler id: 49534020 shutting down ...
+
+==> /var/log/gitlab/unicorn/current <==
+2015-07-23_10:30:37.10224 forwarding TERM to unicorn master 3319
+2015-07-23_10:30:37.10225 forwarding CONT to unicorn master 3319
+
+==> /var/log/gitlab/unicorn/unicorn_stderr.log <==
+I, [2015-07-23T10:30:37.202978 #3319]  INFO -- : reaped #<Process::Status: pid 3367 exit 0> worker=0
+I, [2015-07-23T10:30:37.203064 #3319]  INFO -- : reaped #<Process::Status: pid 4211 exit 0> worker=1
+I, [2015-07-23T10:30:37.203157 #3319]  INFO -- : master complete
+
+==> /var/log/gitlab/unicorn/current <==
+2015-07-23_10:30:38.11293 wrapper for unicorn master 3319 exiting
+2015-07-23_10:30:38.12972 starting new unicorn master
+
+==> /var/log/gitlab/unicorn/unicorn_stderr.log <==
+I, [2015-07-23T10:30:39.637198 #5417]  INFO -- : Refreshing Gem list
+
+==> /var/log/gitlab/sidekiq/current <==
+2015-07-23_10:30:46.89520 2015-07-23T10:30:46.894Z 5391 TID-aogk0 INFO: [Sidetiq] Sidetiq v0.6.3 - Copyright (c) 2012-2013, Tobias Svensson <tob@tobiassvensson.co.uk>
+2015-07-23_10:30:46.89522 2015-07-23T10:30:46.894Z 5391 TID-aogk0 INFO: [Sidetiq] Sidetiq is covered by the 3-clause BSD license.
+2015-07-23_10:30:46.89522 2015-07-23T10:30:46.894Z 5391 TID-aogk0 INFO: [Sidetiq] See LICENSE and http://opensource.org/licenses/BSD-3-Clause for licensing details.
+2015-07-23_10:30:46.89523 2015-07-23T10:30:46.894Z 5391 TID-aogk0 INFO: [Sidetiq] Sidetiq::Supervisor start
+<!-- 2015-07-23_10:30:46.90011 2015-07-23T10:30:46.900Z 5391 TID-ygy6k INFO: [Sidetiq] Sidetiq::Actor::Clock id: 57900060 initialize -->
+2015-07-23_10:30:46.90614 2015-07-23T10:30:46.906Z 5391 TID-ygdac INFO: [Sidetiq] Sidetiq::Actor::Handler id: 57872760 initialize
+2015-07-23_10:30:46.90663 2015-07-23T10:30:46.906Z 5391 TID-yg2n0 INFO: [Sidetiq] Sidetiq::Actor::Handler id: 57858980 initialize
+2015-07-23_10:30:49.45179 2015-07-23T10:30:49.451Z 5391 TID-aogk0 INFO: Booting Sidekiq 3.3.0 with redis options {:url=>"unix:/var/opt/gitlab/redis/redis.socket", :namespace=>"resque:gitlab"}
+2015-07-23_10:30:54.06139 2015-07-23T10:30:54.061Z 5391 TID-aogk0 INFO: Running in ruby 2.1.6p336 (2015-04-13 revision 50298) [x86_64-linux]
+2015-07-23_10:30:54.06495 2015-07-23T10:30:54.064Z 5391 TID-aogk0 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2015-07-23_10:30:54.06505 2015-07-23T10:30:54.065Z 5391 TID-aogk0 INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org/pro
+2015-07-23_10:30:54.06511 2015-07-23T10:30:54.065Z 5391 TID-aogk0 INFO: Starting processing, hit Ctrl-C to stop
+
+==> /var/log/gitlab/unicorn/unicorn_stderr.log <==
+I, [2015-07-23T10:30:54.514547 #5417]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2015-07-23T10:30:54.514851 #5417]  INFO -- : unlinking existing socket=/var/opt/gitlab/gitlab-rails/sockets/gitlab.socket
+I, [2015-07-23T10:30:54.515643 #5417]  INFO -- : listening on addr=/var/opt/gitlab/gitlab-rails/sockets/gitlab.socket fd=13
+I, [2015-07-23T10:30:54.519693 #5417]  INFO -- : master process ready
+I, [2015-07-23T10:30:54.523767 #5456]  INFO -- : worker=0 spawned pid=5456
+I, [2015-07-23T10:30:54.524049 #5456]  INFO -- : worker=0 ready
+I, [2015-07-23T10:30:54.527423 #5458]  INFO -- : worker=1 spawned pid=5458
+I, [2015-07-23T10:30:54.527661 #5458]  INFO -- : worker=1 ready
+
+==> /var/log/gitlab/unicorn/current <==
+2015-07-23_10:30:55.54865 adopted new unicorn master 5417

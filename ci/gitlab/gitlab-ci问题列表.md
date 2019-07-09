@@ -1,3 +1,6 @@
+- [问题](#%E9%97%AE%E9%A2%98)
+  - [gitlab-runner失联了](#gitlab-runner%E5%A4%B1%E8%81%94%E4%BA%86)
+  - [git-runner配置](#git-runner%E9%85%8D%E7%BD%AE)
 # 问题
 ## gitlab-runner失联了
 参考:[gitlab-runner 失联了](https://www.jianshu.com/p/6063c1a2fa47)
@@ -80,4 +83,3 @@ check_interval = 0
 - log_level 日志级别，比命令行的参数级别低:--debug, -l or --log-level
 - log_format 日志格式如：runner、text、json等，命令参数为 --log-format
 - check_interval 新任务的检查周期，默认为3秒
-- 

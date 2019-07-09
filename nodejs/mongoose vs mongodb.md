@@ -74,3 +74,16 @@ Suppose you wanted to track different types of events in a single collection. Ev
 # How to inherit a mongoose model and store it in a different collection
 [How to inherit a mongoose model and store it in a different collection](http://stackoverflow.com/questions/34980337/how-to-inherit-a-mongoose-model-and-store-it-in-a-different-collection)
 
+
+# 案例
+## MongoNetworkError: connection 0 to xxx closed 数据库连接关闭
+如下日志，可能原因是数据库宕机了
+```
+(node:8266) UnhandledPromiseRejectionWarning: MongoNetworkError: connection 0 to dds-bp1ad70ef34be93433270.mongodb.rds.aliyuncs.com:3717 closed
+    at Socket.<anonymous> (/root/test/mongodb-performance/node_modules/mongodb-core/lib/connection/connection.js:352:9)
+    at Object.onceWrapper (events.js:272:13)
+    at Socket.emit (events.js:180:13)
+    at TCP._handle.close [as _onclose] (net.js:541:12)
+(node:8266) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:8266) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+```

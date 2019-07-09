@@ -1,0 +1,31 @@
+[root@ip-172-31-28-245 attributes]# netstat -anp|grep LISTEN
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LISTEN      1015/sshd           
+tcp        0      0 127.0.0.1:25                0.0.0.0:*                   LISTEN      1101/master         
+unix  2      [ ACC ]     STREAM     LISTENING     6529   1/init              @/com/ubuntu/upstart
+unix  2      [ ACC ]     STREAM     LISTENING     8664   900/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     9396   1101/master         public/cleanup
+unix  2      [ ACC ]     STREAM     LISTENING     9568   1125/abrtd          /var/run/abrt/abrt.socket
+unix  2      [ ACC ]     STREAM     LISTENING     9403   1101/master         private/tlsmgr
+unix  2      [ ACC ]     STREAM     LISTENING     9407   1101/master         private/rewrite
+unix  2      [ ACC ]     STREAM     LISTENING     9411   1101/master         private/bounce
+unix  2      [ ACC ]     STREAM     LISTENING     9415   1101/master         private/defer
+unix  2      [ ACC ]     STREAM     LISTENING     9419   1101/master         private/trace
+unix  2      [ ACC ]     STREAM     LISTENING     9423   1101/master         private/verify
+unix  2      [ ACC ]     STREAM     LISTENING     9427   1101/master         public/flush
+unix  2      [ ACC ]     STREAM     LISTENING     9431   1101/master         private/proxymap
+unix  2      [ ACC ]     STREAM     LISTENING     9435   1101/master         private/proxywrite
+unix  2      [ ACC ]     STREAM     LISTENING     9439   1101/master         private/smtp
+unix  2      [ ACC ]     STREAM     LISTENING     9443   1101/master         private/relay
+unix  2      [ ACC ]     STREAM     LISTENING     9447   1101/master         public/showq
+unix  2      [ ACC ]     STREAM     LISTENING     9451   1101/master         private/error
+unix  2      [ ACC ]     STREAM     LISTENING     8793   939/hald            @/var/run/hald/dbus-BsGIk4UTnY
+unix  2      [ ACC ]     STREAM     LISTENING     9455   1101/master         private/retry
+unix  2      [ ACC ]     STREAM     LISTENING     9459   1101/master         private/discard
+unix  2      [ ACC ]     STREAM     LISTENING     9463   1101/master         private/local
+unix  2      [ ACC ]     STREAM     LISTENING     9467   1101/master         private/virtual
+unix  2      [ ACC ]     STREAM     LISTENING     9471   1101/master         private/lmtp
+unix  2      [ ACC ]     STREAM     LISTENING     9475   1101/master         private/anvil
+unix  2      [ ACC ]     STREAM     LISTENING     9479   1101/master         private/scache
+unix  2      [ ACC ]     STREAM     LISTENING     9072   992/nscd            /var/run/nscd/socket
+unix  2      [ ACC ]     STREAM     LISTENING     8788   939/hald            @/var/run/hald/dbus-5D3uLetXi2
+unix  2      [ ACC ]     STREAM     LISTENING     8752   930/acpid           /var/run/acpid.socket

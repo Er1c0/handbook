@@ -1,0 +1,265 @@
+root@AY120810031731bef8123:/opt/gitlab/bin# sudo gitlab-ctl reconfigure
+Starting Chef Client, version 12.4.0.rc.0
+resolving cookbooks for run list: ["gitlab"]
+[2015-07-24T13:47:50+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+[2015-07-24T13:47:51+08:00] WARN: Cookbook 'local-mode-cache' is empty or entirely chefignored at /opt/gitlab/embedded/cookbooks/local-mode-cache
+Synchronizing Cookbooks:
+  - runit
+  - package
+  - gitlab
+Compiling Cookbooks...
+Recipe: gitlab::default
+  * directory[/etc/gitlab] action create (up to date)
+[2015-07-24T13:47:51+08:00] WARN: Cloning resource attributes for directory[/var/opt/gitlab] from prior resource (CHEF-3694)
+[2015-07-24T13:47:51+08:00] WARN: Previous directory[/var/opt/gitlab]: /opt/gitlab/embedded/cookbooks/cache/cookbooks/gitlab/recipes/default.rb:43:in `from_file'
+[2015-07-24T13:47:51+08:00] WARN: Current  directory[/var/opt/gitlab]: /opt/gitlab/embedded/cookbooks/cache/cookbooks/gitlab/recipes/users.rb:23:in `from_file'
+[2015-07-24T13:47:52+08:00] WARN: Cloning resource attributes for cron[gitlab-ci schedule builds] from prior resource (CHEF-3694)
+[2015-07-24T13:47:52+08:00] WARN: Previous cron[gitlab-ci schedule builds]: /opt/gitlab/embedded/cookbooks/cache/cookbooks/gitlab/recipes/cron.rb:19:in `from_file'
+[2015-07-24T13:47:52+08:00] WARN: Current  cron[gitlab-ci schedule builds]: /opt/gitlab/embedded/cookbooks/cache/cookbooks/gitlab/recipes/cron.rb:24:in `from_file'
+init (upstart 1.5)
+[2015-07-24T13:47:52+08:00] WARN: Selected upstart because /sbin/init --version is showing upstart.
+[2015-07-24T13:47:52+08:00] WARN: Cloning resource attributes for directory[/var/opt/gitlab/gitlab-rails/etc] from prior resource (CHEF-3694)
+[2015-07-24T13:47:52+08:00] WARN: Previous directory[/var/opt/gitlab/gitlab-rails/etc]: /opt/gitlab/embedded/cookbooks/cache/cookbooks/gitlab/recipes/gitlab-rails.rb:41:in `block in from_file'
+[2015-07-24T13:47:52+08:00] WARN: Current  directory[/var/opt/gitlab/gitlab-rails/etc]: /opt/gitlab/embedded/cookbooks/cache/cookbooks/gitlab/definitions/unicorn_config.rb:21:in `block in from_file'
+[2015-07-24T13:47:53+08:00] WARN: Cloning resource attributes for service[unicorn] from prior resource (CHEF-3694)
+[2015-07-24T13:47:53+08:00] WARN: Previous service[unicorn]: /opt/gitlab/embedded/cookbooks/cache/cookbooks/gitlab/recipes/default.rb:88:in `block in from_file'
+[2015-07-24T13:47:53+08:00] WARN: Current  service[unicorn]: /opt/gitlab/embedded/cookbooks/cache/cookbooks/runit/definitions/runit_service.rb:191:in `block in from_file'
+[2015-07-24T13:47:53+08:00] WARN: Cloning resource attributes for service[sidekiq] from prior resource (CHEF-3694)
+[2015-07-24T13:47:53+08:00] WARN: Previous service[sidekiq]: /opt/gitlab/embedded/cookbooks/cache/cookbooks/gitlab/recipes/default.rb:88:in `block in from_file'
+[2015-07-24T13:47:53+08:00] WARN: Current  service[sidekiq]: /opt/gitlab/embedded/cookbooks/cache/cookbooks/runit/definitions/runit_service.rb:191:in `block in from_file'
+  Converging 194 resources
+  * directory[/etc/gitlab] action nothing (skipped due to action :nothing)
+  * directory[/var/opt/gitlab] action create (up to date)
+  * directory[/opt/gitlab/embedded/etc] action create (up to date)
+  * template[/opt/gitlab/embedded/etc/gitconfig] action create (up to date)
+Recipe: gitlab::web-server
+  * group[gitlab-www] action create (up to date)
+  * user[gitlab-www] action create (up to date)
+Recipe: gitlab::users
+  * directory[/var/opt/gitlab] action create (up to date)
+  * group[git] action create (up to date)
+  * user[git] action create (up to date)
+  * template[/var/opt/gitlab/.gitconfig] action create (up to date)
+Recipe: gitlab::gitlab-shell
+  * directory[/var/opt/gitlab/git-data/repositories] action create (up to date)
+  * directory[/var/opt/gitlab/.ssh] action create (up to date)
+  * file[/var/opt/gitlab/.ssh/authorized_keys] action create (up to date)
+  * file[/opt/gitlab/embedded/service/gitlab-shell/authorized_keys.lock] action create (up to date)
+  * execute[chcon --recursive --type ssh_home_t /var/opt/gitlab/.ssh] action run (skipped due to only_if)
+  * directory[/var/log/gitlab/gitlab-shell/] action create (up to date)
+  * directory[/var/opt/gitlab/gitlab-shell] action create (up to date)
+  * directory[/var/opt/gitlab/git-data] action create (up to date)
+  * template[/var/opt/gitlab/gitlab-shell/config.yml] action create (up to date)
+  * link[/opt/gitlab/embedded/service/gitlab-shell/config.yml] action create (up to date)
+  * template[/var/opt/gitlab/gitlab-shell/gitlab_shell_secret] action create (up to date)
+  * link[/opt/gitlab/embedded/service/gitlab-shell/.gitlab_shell_secret] action create (up to date)
+Recipe: gitlab::gitlab-rails
+  * directory[/var/opt/gitlab/gitlab-rails/etc] action create (up to date)
+  * directory[/opt/gitlab/etc/gitlab-rails] action create (up to date)
+  * directory[/var/opt/gitlab/gitlab-rails/working] action create (up to date)
+  * directory[/var/opt/gitlab/gitlab-rails/tmp] action create (up to date)
+  * directory[/var/opt/gitlab/backups] action create (up to date)
+  * directory[/var/log/gitlab/gitlab-rails] action create (up to date)
+  * directory[/var/opt/gitlab/gitlab-rails] action create (up to date)
+  * directory[/var/opt/gitlab/gitlab-rails/uploads] action create (up to date)
+  * template[/opt/gitlab/etc/gitlab-rails/gitlab-rails-rc] action create (up to date)
+  * template[/var/opt/gitlab/gitlab-rails/etc/secret] action create (up to date)
+  * link[/opt/gitlab/embedded/service/gitlab-rails/.secret] action create (up to date)
+  * template[/var/opt/gitlab/gitlab-rails/etc/database.yml] action create (up to date)
+  * link[/opt/gitlab/embedded/service/gitlab-rails/config/database.yml] action create (up to date)
+  * template[/var/opt/gitlab/gitlab-rails/etc/resque.yml] action create (up to date)
+  * link[/opt/gitlab/embedded/service/gitlab-rails/config/resque.yml] action create (up to date)
+  * template[/var/opt/gitlab/gitlab-rails/etc/aws.yml] action delete (up to date)
+  * link[/opt/gitlab/embedded/service/gitlab-rails/config/aws.yml] action delete (up to date)
+  * template[/var/opt/gitlab/gitlab-rails/etc/smtp_settings.rb] action create (up to date)
+  * link[/opt/gitlab/embedded/service/gitlab-rails/config/initializers/smtp_settings.rb] action create (up to date)
+  * template[/var/opt/gitlab/gitlab-rails/etc/gitlab.yml] action create (up to date)
+  * link[/opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml] action create (up to date)
+  * template[/var/opt/gitlab/gitlab-rails/etc/rack_attack.rb] action create (up to date)
+  * link[/opt/gitlab/embedded/service/gitlab-rails/config/initializers/rack_attack.rb] action create (up to date)
+  * link[/opt/gitlab/embedded/service/gitlab-rails/.gitlab_shell_secret] action create (up to date)
+  * directory[/var/opt/gitlab/git-data/gitlab-satellites] action create (up to date)
+  * directory[/opt/gitlab/etc/gitlab-rails/env] action create (up to date)
+  * file[/opt/gitlab/etc/gitlab-rails/env/HOME] action create (up to date)
+  * file[/opt/gitlab/etc/gitlab-rails/env/RAILS_ENV] action create (up to date)
+  * file[/opt/gitlab/etc/gitlab-rails/env/SIDEKIQ_MEMORY_KILLER_MAX_RSS] action create (up to date)
+  * file[/opt/gitlab/etc/gitlab-rails/env/BUNDLE_GEMFILE] action create (up to date)
+  * file[/opt/gitlab/etc/gitlab-rails/env/PATH] action create (up to date)
+  * link[/opt/gitlab/embedded/service/gitlab-rails/tmp] action create (up to date)
+  * link[/opt/gitlab/embedded/service/gitlab-rails/public/uploads] action create (up to date)
+  * link[/opt/gitlab/embedded/service/gitlab-rails/log] action create (up to date)
+  * link[/var/log/gitlab/gitlab-rails/sidekiq.log] action create (skipped due to not_if)
+  * file[/opt/gitlab/embedded/service/gitlab-rails/db/schema.rb] action create (up to date)
+  * remote_file[/var/opt/gitlab/gitlab-rails/VERSION] action create (up to date)
+  * execute[chown -R root:root /opt/gitlab/embedded/service/gitlab-rails/public] action run
+    - execute chown -R root:root /opt/gitlab/embedded/service/gitlab-rails/public
+  * execute[clear the gitlab-rails cache] action nothing (skipped due to action :nothing)
+Recipe: gitlab::cron
+  * cron[gitlab-ci schedule builds] action delete (up to date)
+  * cron[gitlab-ci schedule builds] action delete (up to date)
+Recipe: gitlab::default
+  * service[unicorn] action nothing (up to date)
+  * service[ci-unicorn] action nothing (up to date)
+  * service[sidekiq] action nothing (up to date)
+  * service[ci-sidekiq] action nothing (up to date)
+Recipe: runit::upstart
+  * cookbook_file[/etc/init/gitlab-runsvdir.conf] action create (up to date)
+  * execute[initctl status gitlab-runsvdir] action run
+    - execute initctl status gitlab-runsvdir
+  * execute[initctl start gitlab-runsvdir] action run (skipped due to only_if)
+Recipe: gitlab::redis
+  * group[gitlab-redis] action create (up to date)
+  * user[gitlab-redis] action create (up to date)
+  * directory[/var/opt/gitlab/redis] action create (up to date)
+  * directory[/var/log/gitlab/redis] action create (up to date)
+  * template[/var/opt/gitlab/redis/redis.conf] action create (up to date)
+  * directory[/opt/gitlab/sv/redis] action create (up to date)
+  * directory[/opt/gitlab/sv/redis/log] action create (up to date)
+  * directory[/opt/gitlab/sv/redis/log/main] action create (up to date)
+  * template[/opt/gitlab/sv/redis/run] action create (up to date)
+  * template[/opt/gitlab/sv/redis/log/run] action create (up to date)
+  * template[/var/log/gitlab/redis/config] action create (up to date)
+  * ruby_block[reload redis svlogd configuration] action nothing (skipped due to action :nothing)
+  * file[/opt/gitlab/sv/redis/down] action delete (up to date)
+  * link[/opt/gitlab/init/redis] action create (up to date)
+  * link[/opt/gitlab/service/redis] action create (up to date)
+  * ruby_block[supervise_redis_sleep] action run (skipped due to not_if)
+  * service[redis] action nothing (skipped due to action :nothing)
+Recipe: gitlab::ci-redis_disable
+  * link[/opt/gitlab/service/ci-redis] action delete (up to date)
+Recipe: gitlab::postgresql
+  * group[gitlab-psql] action create (up to date)
+  * user[gitlab-psql] action create (up to date)
+  * directory[/var/opt/gitlab/postgresql] action create (up to date)
+  * directory[/var/opt/gitlab/postgresql/data] action create (up to date)
+  * directory[/var/log/gitlab/postgresql] action create (up to date)
+  * link[/var/opt/gitlab/postgresql/data] action create (skipped due to not_if)
+  * file[/var/opt/gitlab/postgresql/.profile] action create (up to date)
+  * service[procps] action nothing (skipped due to action :nothing)
+  * template[/etc/sysctl.d/90-postgresql.conf] action create (up to date)
+  * execute[/opt/gitlab/embedded/bin/initdb -D /var/opt/gitlab/postgresql/data -E UTF8] action run (skipped due to not_if)
+  * template[/var/opt/gitlab/postgresql/data/postgresql.conf] action create (up to date)
+  * template[/var/opt/gitlab/postgresql/data/pg_hba.conf] action create (up to date)
+  * template[/var/opt/gitlab/postgresql/data/pg_ident.conf] action create (up to date)
+  * directory[/opt/gitlab/sv/postgresql] action create (up to date)
+  * directory[/opt/gitlab/sv/postgresql/log] action create (up to date)
+  * directory[/opt/gitlab/sv/postgresql/log/main] action create (up to date)
+  * template[/opt/gitlab/sv/postgresql/run] action create (up to date)
+  * template[/opt/gitlab/sv/postgresql/log/run] action create (up to date)
+  * template[/var/log/gitlab/postgresql/config] action create (up to date)
+  * ruby_block[reload postgresql svlogd configuration] action nothing (skipped due to action :nothing)
+  * file[/opt/gitlab/sv/postgresql/down] action delete (up to date)
+  * directory[/opt/gitlab/sv/postgresql/control] action create (up to date)
+  * template[/opt/gitlab/sv/postgresql/control/t] action create (up to date)
+  * link[/opt/gitlab/init/postgresql] action create (up to date)
+  * link[/opt/gitlab/service/postgresql] action create (up to date)
+  * ruby_block[supervise_postgresql_sleep] action run (skipped due to not_if)
+  * service[postgresql] action nothing (skipped due to action :nothing)
+  * execute[create gitlab database user] action run (skipped due to not_if)
+  * execute[create gitlabhq_production database] action run (skipped due to not_if)
+Recipe: gitlab::unicorn
+  * directory[/var/log/gitlab/unicorn] action create (up to date)
+  * directory[/opt/gitlab/var/unicorn] action create (up to date)
+  * directory[/var/opt/gitlab/gitlab-rails/sockets] action create (up to date)
+  * directory[/var/opt/gitlab/gitlab-rails/etc] action create (up to date)
+  * template[/var/opt/gitlab/gitlab-rails/etc/unicorn.rb] action create (up to date)
+  * directory[/opt/gitlab/sv/unicorn] action create (up to date)
+  * directory[/opt/gitlab/sv/unicorn/log] action create (up to date)
+  * directory[/opt/gitlab/sv/unicorn/log/main] action create (up to date)
+  * template[/opt/gitlab/sv/unicorn/run] action create (up to date)
+  * template[/opt/gitlab/sv/unicorn/log/run] action create (up to date)
+  * template[/var/log/gitlab/unicorn/config] action create (up to date)
+  * ruby_block[reload unicorn svlogd configuration] action nothing (skipped due to action :nothing)
+  * file[/opt/gitlab/sv/unicorn/down] action delete (up to date)
+  * link[/opt/gitlab/init/unicorn] action create (up to date)
+  * link[/opt/gitlab/service/unicorn] action create (up to date)
+  * ruby_block[supervise_unicorn_sleep] action run (skipped due to not_if)
+  * service[unicorn] action nothing (skipped due to action :nothing)
+Recipe: gitlab::ci-unicorn_disable
+  * link[/opt/gitlab/service/ci-unicorn] action delete (up to date)
+Recipe: gitlab::sidekiq
+  * directory[/var/log/gitlab/sidekiq] action create (up to date)
+  * directory[/opt/gitlab/sv/sidekiq] action create (up to date)
+  * directory[/opt/gitlab/sv/sidekiq/log] action create (up to date)
+  * directory[/opt/gitlab/sv/sidekiq/log/main] action create (up to date)
+  * template[/opt/gitlab/sv/sidekiq/run] action create (up to date)
+  * template[/opt/gitlab/sv/sidekiq/log/run] action create (up to date)
+  * template[/var/log/gitlab/sidekiq/config] action create (up to date)
+  * ruby_block[reload sidekiq svlogd configuration] action nothing (skipped due to action :nothing)
+  * file[/opt/gitlab/sv/sidekiq/down] action delete (up to date)
+  * link[/opt/gitlab/init/sidekiq] action create (up to date)
+  * link[/opt/gitlab/service/sidekiq] action create (up to date)
+  * ruby_block[supervise_sidekiq_sleep] action run (skipped due to not_if)
+  * service[sidekiq] action nothing (skipped due to action :nothing)
+Recipe: gitlab::ci-sidekiq_disable
+  * link[/opt/gitlab/service/ci-sidekiq] action delete (up to date)
+Recipe: gitlab::nginx
+  * directory[/var/opt/gitlab/nginx] action create (up to date)
+  * directory[/var/opt/gitlab/nginx/conf] action create (up to date)
+  * directory[/var/log/gitlab/nginx] action create (up to date)
+  * link[/var/opt/gitlab/nginx/logs] action create (up to date)
+  * template[/var/opt/gitlab/nginx/conf/gitlab-http.conf] action create (up to date)
+  * template[/var/opt/gitlab/nginx/conf/gitlab-ci-http.conf] action delete (up to date)
+  * template[/var/opt/gitlab/nginx/conf/nginx.conf] action create (up to date)
+  * directory[/opt/gitlab/sv/nginx] action create (up to date)
+  * directory[/opt/gitlab/sv/nginx/log] action create (up to date)
+  * directory[/opt/gitlab/sv/nginx/log/main] action create (up to date)
+  * template[/opt/gitlab/sv/nginx/run] action create (up to date)
+  * template[/opt/gitlab/sv/nginx/log/run] action create (up to date)
+  * template[/var/log/gitlab/nginx/config] action create (up to date)
+  * ruby_block[reload nginx svlogd configuration] action nothing (skipped due to action :nothing)
+  * file[/opt/gitlab/sv/nginx/down] action delete (up to date)
+  * link[/opt/gitlab/init/nginx] action create (up to date)
+  * link[/opt/gitlab/service/nginx] action create (up to date)
+  * ruby_block[supervise_nginx_sleep] action run (skipped due to not_if)
+  * service[nginx] action nothing (skipped due to action :nothing)
+Recipe: gitlab::remote-syslog_disable
+  * link[/opt/gitlab/service/remote-syslog] action delete (up to date)
+Recipe: gitlab::logrotate
+  * directory[/var/opt/gitlab/logrotate] action create (up to date)
+  * directory[/var/opt/gitlab/logrotate/logrotate.d] action create (up to date)
+  * directory[/var/log/gitlab/logrotate] action create (up to date)
+  * template[/var/opt/gitlab/logrotate/logrotate.conf] action create (up to date)
+  * template[/var/opt/gitlab/logrotate/logrotate.d/nginx] action create (up to date)
+  * template[/var/opt/gitlab/logrotate/logrotate.d/unicorn] action create (up to date)
+  * template[/var/opt/gitlab/logrotate/logrotate.d/gitlab-rails] action create (up to date)
+  * template[/var/opt/gitlab/logrotate/logrotate.d/gitlab-shell] action create (up to date)
+  * template[/var/opt/gitlab/logrotate/logrotate.d/gitlab-ci] action create (up to date)
+  * directory[/opt/gitlab/sv/logrotate] action create (up to date)
+  * directory[/opt/gitlab/sv/logrotate/log] action create (up to date)
+  * directory[/opt/gitlab/sv/logrotate/log/main] action create (up to date)
+  * template[/opt/gitlab/sv/logrotate/run] action create (up to date)
+  * template[/opt/gitlab/sv/logrotate/log/run] action create (up to date)
+  * template[/var/log/gitlab/logrotate/config] action create (up to date)
+  * ruby_block[reload logrotate svlogd configuration] action nothing (skipped due to action :nothing)
+  * file[/opt/gitlab/sv/logrotate/down] action delete (up to date)
+  * link[/opt/gitlab/init/logrotate] action create (up to date)
+  * link[/opt/gitlab/service/logrotate] action create (up to date)
+  * ruby_block[supervise_logrotate_sleep] action run (skipped due to not_if)
+  * service[logrotate] action nothing (skipped due to action :nothing)
+Recipe: gitlab::database_migrations
+  * execute[initialize gitlab-rails database] action nothing (skipped due to action :nothing)
+  * execute[initialize gitlab-ci database] action nothing (skipped due to action :nothing)
+  * bash[migrate gitlab-rails database] action nothing (skipped due to action :nothing)
+  * bash[migrate gitlab-ci database] action nothing (skipped due to action :nothing)
+
+Running handlers:
+Running handlers complete
+Chef Client finished, 2/163 resources updated in 7.907605494 seconds
+gitlab Reconfigured!
