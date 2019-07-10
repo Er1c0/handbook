@@ -10,3 +10,6 @@ usage: ln [-Ffhinsv] source_file [target_file]
 cp    existing_thing new_thing
 ln -s existing_thing new_thing
 ```
+
+关于这个命令的讨论还是很热烈的:
+[I always forget the argument order of the `ln -s` command](https://news.ycombinator.com/item?id=1984456)
