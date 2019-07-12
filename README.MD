@@ -5,7 +5,10 @@
 - buz
   - [通过氚云配置订单系统](buz/通过氚云配置订单系统.md)
 - ci
-  - [gitlab-ci](ci/gitlab-ci.md)
+  - gitlab
+    - [gitlab-ci问题列表](ci/gitlab/gitlab-ci问题列表.md)
+    - [gitlab入门](ci/gitlab/gitlab入门.md)
+    - [gitlbab持续集成](ci/gitlab/gitlbab持续集成.md)
 - database
   - [PostgreSQL](database/PostgreSQL.md)
   - [Timeseries statistics util](database/Timeseries statistics util.md)
@@ -29,6 +32,9 @@
 - git
   - [git常用命令](git/git常用命令.md)
   - [为什么Github没有记录你的Contributions](git/为什么Github没有记录你的Contributions.md)
+- linux
+  - [为何bashrc要检查是否交互模式(为何远程执行bashrc没有效果)](linux/为何bashrc要检查是否交互模式(为何远程执行bashrc没有效果).md)
+  - [理解ln(link)参数顺序的小窍门](linux/理解ln(link)参数顺序的小窍门.md)
 - mac
   - [mac使用](mac/mac使用.md)
 - network
@@ -42,12 +48,14 @@
   - [node-pre-gyp和node-gyp](nodejs/node-pre-gyp和node-gyp.md)
   - [nodejs经验笔记](nodejs/nodejs经验笔记.md)
   - [nodered](nodejs/nodered.md)
+  - [npm install命令小实践](nodejs/npm install命令小实践.md)
   - [npm install类问题](nodejs/npm install类问题.md)
   - [npm](nodejs/npm.md)
   - [nrm](nodejs/nrm.md)
   - [nvm](nodejs/nvm.md)
   - [typescript](nodejs/typescript.md)
   - [三个点three dots使用说明](nodejs/三个点three dots使用说明.md)
+  - [了解语义化版本(semver)管理](nodejs/了解语义化版本(semver)管理.md)
 - office
   - [docx文件解析](office/docx文件解析.md)
   - [ooxml](office/ooxml.md)
@@ -61,6 +69,7 @@
   - [公众号+小程序将成标配打法](web/公众号+小程序将成标配打法.md)
   - [动态表单](web/动态表单.md)
   - [动态表单的设计](web/动态表单的设计.md)
+  - [如何选择最佳的静态页面生成器2019](web/如何选择最佳的静态页面生成器2019.md)
   - [小程序原理](web/小程序原理.md)
   - [小程序排名和趋势](web/小程序排名和趋势.md)
   - [氚云学习](web/氚云学习.md)
@@ -68,5 +77,6 @@
 - 读书笔记
   - [processOn](读书笔记/processOn.md)
   - [从软件搬砖师到软件架构师，程序员的架构师之路-许式伟](读书笔记/从软件搬砖师到软件架构师，程序员的架构师之路-许式伟.md)
+  - [关于大型应用的设计心得](读书笔记/关于大型应用的设计心得.md)
   - [国际SaaS巨头前进，国内对标者几何？](读书笔记/国际SaaS巨头前进，国内对标者几何？.md)
   - [黑客与画家](读书笔记/黑客与画家.md)
