@@ -1,4 +1,4 @@
-# static静态方法
+# static静态方法的用法
 ```
 class User {
   constructor() {
@@ -23,8 +23,8 @@ static是为类定义静态方法的关键字。不能在类实例上调用静�
 
 参考：
 
--[js call static method from class](https://stackoverflow.com/questions/43614131/js-call-static-method-from-class/43614217)
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static
+- [js call static method from class](https://stackoverflow.com/questions/43614131/js-call-static-method-from-class/43614217)
+- [static方法使用](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)
 
 
 
