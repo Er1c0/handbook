@@ -34,11 +34,26 @@ dpkg -l |grep vagrant # 查看版本
 # 简单使用
 [在官网搜索box](https://app.vagrantup.com/boxes/search)
 导入box,启动你的第一个虚拟机
-```bash
+**```bash**
 vagrant init centos/7  #会自动创建一个Vagrantfile，并且自动从官方仓储中下载centos/7
 vagrant up
 ```
 说明，vagrant命令执行时，需要在包含Vagrantfile文件的目录下运行,否则会报[A Vagrant environment or target machine is required to run this command](https://stackoverflow.com/questions/34745295/a-vagrant-environment-or-target-machine-is-required)
 
 
+# 共享文件夹
 
+默认情况下，Vagrant会共享项目目录(就是Vagrantfile所在目录)到虚拟机的/vagrant.
+[how to map a folder in my VM to my local machine](https://askubuntu.com/questions/323082/how-to-map-a-folder-in-my-vm-to-my-local-machine)
+
+例如启动时有一个语句:Rsyncing folder: xxx => /vagrant
+```
+==> lab1: Setting hostname...
+==> lab1: Configuring and enabling network interfaces...
+==> lab1: Rsyncing folder: /home/lingxi/lcz/ => /vagrant
+==> lab1: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> lab1: flag to force provisioning. Provisioners marked to run always will still run.
+==> lab1: Running provisioner: shell...
+    lab1: Running: inline script
+    lab1: hello from lab1
+```
