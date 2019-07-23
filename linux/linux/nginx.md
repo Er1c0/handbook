@@ -194,7 +194,7 @@ htpasswd -c xxxx abc abcd
 ## Nginx控制http超时时间
 
 - proxy_read_timeout 是等待后端返回页面的时间，默认60s
-- keepalive_timeout
+- **keepalive_timeout**
 
 可以控制某个api的超时
 ```

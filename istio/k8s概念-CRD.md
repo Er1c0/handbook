@@ -1,4 +1,4 @@
-
+****
 # 
 CRD是Kubernetes为提高可扩展性，让开发者去自定义资源（如Deployment，StatefulSet等）的一种方法。
 
